@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedTweetActivity">
+
+    <RelativeLayout
+        android:id="@+id/user_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:transitionName="profile"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tweet_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/profile_picture"
+            android:paddingEnd="5dp"
+            android:text="@string/tweet_owner"
+            android:textColor="#14479F"
+            android:transitionName="profile"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tweet_owner_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tweet_owner"
+            android:textColor="#000000"
+
+            android:layout_toEndOf="@+id/profile_picture"
+            android:text="@string/tweet_owner_at"
+            android:textSize="21sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/line_one"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_below="@id/user_container"
+        tools:src="@drawable/line"/>
+
+    <TextView
+        android:id="@+id/tweet_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_container"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tweet_text"
+        android:textColor="#794E7A"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/line_two"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_below="@+id/tweet_text"
+        tools:src="@drawable/line"/>
+
+    <ImageView
+        android:id="@+id/tweet_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tweet_text"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        tools:src="@drawable/salah" />
+
+    <TextView
+        android:id="@+id/tweet_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_three"
+        android:text="@string/tweet_time"
+        android:textColor="#000000"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/line_three"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_below="@id/tweet_picture"
+        tools:src="@drawable/line"/>
+
+    <ImageView
+        android:id="@+id/star_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/star"
+        android:layout_below="@+id/line_three"
+        android:layout_toEndOf="@+id/tweet_time"/>
+
+    <TextView
+        android:id="@+id/tweet_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_three"
+        android:text="@string/tweet_date"
+        android:layout_toEndOf="@id/star_one"
+        android:paddingStart="20dp"
+        android:textColor="#000000"
+        android:paddingEnd="10dp"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/star_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/star"
+        android:layout_below="@+id/line_three"
+        android:layout_toEndOf="@+id/tweet_date"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_three"
+        android:text="@string/twitter_for_android"
+        android:layout_toEndOf="@+id/star_two"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp" />
+
+    <ImageView
+        android:id="@+id/line_four"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_below="@id/tweet_date"
+        tools:src="@drawable/line"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_four">
+
+        <TextView
+            android:id="@+id/tweet_retweets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:text="10"
+            android:textColor="#136C56"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/retweeted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/retweet"
+            android:paddingTop="10dp"
+            android:layout_toEndOf="@id/tweet_retweets"/>
+
+
+        <TextView
+            android:id="@+id/tweet_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_four"
+            android:layout_toEndOf="@+id/tweet_retweets"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:text="5"
+            android:textColor="#136C56"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/liked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/liked"
+            android:paddingTop="10dp"
+            android:layout_toEndOf="@+id/tweet_likes" />
+    </GridLayout>
+
+
+</RelativeLayout>

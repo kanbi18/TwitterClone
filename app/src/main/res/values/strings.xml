@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kanbi Twitter</string>
+    <string name="login_label">Log in</string>
+    <string name="intent_scheme">oauth</string>
+    <string name="intent_host">cprest</string>
+    <string name="tweet_owner">Liverpool FC</string>
+    <string name="tweet_owner_at">@LFC</string>
+    <string name="tweet_text">Have a great day, Trent</string>
+    <string name="twitter_for_android">Twitter for Android</string>
+    <string name="tweet_date">03/14/2018</string>
+    <string name="tweet_time">10:17pm</string>
+
+</resources>
